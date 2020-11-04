@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropType from "prop-types";
 
-const CounterApp = ({ value }) => {
+const CounterApp = ({ value = 100 }) => {
   //HOOKs https://es.reactjs.org/docs/hooks-intro.html
   // Desesctructuramos el array del useState
   const [counter, setCounter] = useState(value); // returnn []
@@ -30,7 +30,8 @@ const CounterApp = ({ value }) => {
 };
 
 CounterApp.propTypes = {
-  value: PropType.number.isRequired,
+  value: PropType.number
 };
+
 
 export default CounterApp;
